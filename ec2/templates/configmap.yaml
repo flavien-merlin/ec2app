@@ -1,0 +1,9 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: ec2appcm
+  namespace: default
+  labels:
+    {{- include "ec2.labels" . | nindent 4 }}
+data:
+    INTERVAL: {{ .Values.env.INTERVAL | quote }}
