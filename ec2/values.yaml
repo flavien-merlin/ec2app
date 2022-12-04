@@ -3,12 +3,12 @@
 # Declare variables to be passed into your templates.
 replicaCount: 1
 env:
-  INTERVAL: 10
+  INTERVAL: 300
 image:
   repository: flav95/flav
   pullPolicy: IfNotPresent
   # Overrides the image tag whose default is the chart appVersion.
-  tag: 30
+  tag: 61
 imagePullSecrets: []
 nameOverride: ""
 fullnameOverride: ""
