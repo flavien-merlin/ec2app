@@ -1,0 +1,13 @@
+project: default
+source:
+  repoURL: 'git@github.com:flavien-merlin/ec2app.git'
+  path: ec2
+  targetRevision: master
+destination:
+  server: 'https://kubernetes.default.svc'
+  namespace: argo
+syncPolicy:
+  automated:
+    selfHeal: true
+  syncOptions:
+    - CreateNamespace=true
